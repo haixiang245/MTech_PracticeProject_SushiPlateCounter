@@ -50,6 +50,14 @@ Open the web interface at `http://127.0.0.1:7860`.
 
 The trained model weights (`weights/front_rim_arc_v2.pt`) are included in this repository.
 
+## Model training
+
+Front-rim detector training is documented in:
+
+[`notebooks/SushiPlateCounter_RimArcDetection_ModelTraining.ipynb`](notebooks/SushiPlateCounter_RimArcDetection_ModelTraining.ipynb)
+
+The notebook was executed in Google Colab (GPU). It covers dataset preparation from rim annotations, YOLO11s training (`rim_yolo11s_FRONTBAND_ARC_CROP_V2`), and evaluation. The exported weights correspond to `weights/front_rim_arc_v2.pt` used by this application.
+
 ## Project structure
 
 ```text
@@ -59,6 +67,8 @@ The trained model weights (`weights/front_rim_arc_v2.pt`) are included in this r
 ├── Makefile
 ├── LICENSE
 ├── README.md
+├── notebooks/
+│   └── SushiPlateCounter_RimArcDetection_ModelTraining.ipynb
 ├── weights/
 │   └── front_rim_arc_v2.pt
 └── src/
