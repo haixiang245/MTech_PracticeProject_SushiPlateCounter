@@ -1,0 +1,51 @@
+from __future__ import annotations
+
+from pathlib import Path
+
+APP_ROOT = Path(__file__).resolve().parents[1]
+WEIGHTS_PATH = APP_ROOT / "weights" / "front_rim_arc_v2.pt"
+
+PRICE_MAP = {
+    "white": 1.50,
+    "black": 2.00,
+    "gold": 3.00,
+    "unknown": 0.00,
+}
+
+IMG_SIZE = 960
+CAND_CONF = 0.005
+FINAL_IOU = 0.20
+MAX_DET = 220
+
+CLEAN_SCORE_FLOOR = 0.08
+Y_CLOSE_FACTOR = 0.45
+X_OVERLAP_THR = 0.50
+DEDUP_IOU_THR = 0.45
+CLEAN_GAP_NOTE_FACTOR = 1.70
+MIN_TABLE_BAND_SCORE = 0.28
+MAX_BOTTOM_CY_FRAC = 0.93
+PREDICT_AUGMENT = True
+CANON_WIDTH_SCALE = 1.08
+CANON_HEIGHT_SCALE = 1.15
+CANON_MIN_H_PX = 8
+MIN_REL_WIDTH = 0.035
+MAX_REL_WIDTH = 1.00
+
+STACK_CROP = {"x1": 0.00, "y1": 0.18, "x2": 1.00, "y2": 0.95}
+
+RIM_STRIP_X_INNER = 0.30
+RIM_STRIP_Y_TOP = 0.35
+RIM_STRIP_Y_BOTTOM = 0.65
+
+WHITE_MIN = 0.30
+BLACK_MIN = 0.15
+GOLD_MIN = 0.28
+COLOUR_LOW_CONF_THRESHOLD = 0.35
+BOTTOM_GOLD_MIN = 0.28
+
+WHITE_V_MIN = 150
+WHITE_S_MAX = 90
+BLACK_V_MAX = 85
+GOLD_H = (10, 45)
+GOLD_S_MIN = 40
+GOLD_V_MIN = 80

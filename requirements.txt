@@ -1,0 +1,8 @@
+ultralytics>=8.3.0
+# PyTorch 2.2 on macOS needs NumPy 1.x (NumPy 2 breaks torch.from_numpy)
+numpy>=1.24.0,<2.0
+# ultralytics already installs opencv-python; avoid headless 4.13+ (pulls numpy 2.x)
+opencv-python-headless>=4.8.0,<4.11
+pandas>=2.0.0
+gradio>=4.0.0,<6.0
+torch>=2.0.0,<2.3

@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+dist/
+build/
+*.egg
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Tooling caches (local only)
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.pytest_deps/
+
+# IDE / OS
+.idea/
+.vscode/
+*.swp
+.DS_Store
+
+# Runtime
+*.log
+.gradio/
+
+# Excluded from publication (see repository layout in README)
+/tests/
+/test_data/
+/scripts/
+requirements-dev.txt
+
+# Weights: publish primary model only
+weights/*.pt
+weights/*.onnx
+!weights/front_rim_arc_v2.pt
